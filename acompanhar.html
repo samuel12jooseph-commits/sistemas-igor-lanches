@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acompanhar Pedido | Igor Lanches</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        .acompanhar{
+            max-width:750px;
+            margin:40px auto;
+            padding:20px;
+        }
+
+        .cartao-status{
+            background:#fff;
+            border-radius:18px;
+            padding:30px;
+            box-shadow:0 10px 35px rgba(0,0,0,.08);
+        }
+
+        .status-acompanhamento{
+            display:flex;
+            align-items:center;
+            gap:15px;
+            margin:25px 0;
+            padding:18px;
+            border-radius:14px;
+            background:#fff7e8;
+        }
+
+        .status-icone{
+            font-size:40px;
+        }
+
+        .linha{
+            display:flex;
+            justify-content:space-between;
+            border-bottom:1px solid #ececec;
+            padding:12px 0;
+        }
+
+        .etapas-pedido{
+            margin-top:30px;
+        }
+
+        .etapa{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            margin-bottom:14px;
+            color:#888;
+        }
+
+        .etapa-marcador{
+            width:26px;
+            height:26px;
+            border-radius:50%;
+            border:2px solid #bbb;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:13px;
+        }
+
+        .etapa-concluida{
+            color:#2e7d32;
+            font-weight:bold;
+        }
+
+        .etapa-concluida .etapa-marcador{
+            background:#2e7d32;
+            border-color:#2e7d32;
+            color:#fff;
+        }
+
+        .mensagem-acompanhamento{
+            margin-top:25px;
+            text-align:center;
+            color:#666;
+        }
+
+        .acoes{
+            display:flex;
+            gap:12px;
+            margin-top:30px;
+        }
+
+        .acoes a{
+            flex:1;
+            text-align:center;
+            text-decoration:none;
+            background:#111;
+            color:#fff;
+            padding:14px;
+            border-radius:12px;
+            font-weight:bold;
+        }
+
+    </style>
+
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#f5a623"></head>
+
+<body>
+
+<main class="acompanhar">
+
+    <div class="cartao-status">
+
+        <span class="subtitulo">
+            Acompanhamento
+        </span>
+
+        <h1>Meu Pedido</h1>
+
+        <div id="meu-pedido">
+
+            <p>Carregando pedido...</p>
+
+        </div>
+
+        <div class="acoes">
+
+            <a href="cardapio.html">
+                Fazer outro pedido
+            </a>
+
+            <a href="index.html">
+                Início
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script type="module" src="js/acompanhar.js"></script>
+
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.warn));}</script></body>
+</html>

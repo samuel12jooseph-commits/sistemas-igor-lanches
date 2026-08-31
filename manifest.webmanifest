@@ -1,0 +1,16 @@
+{
+  "name": "Igor Lanches",
+  "short_name": "Igor Lanches",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#f5a623",
+  "icons": [
+    {
+      "src": "assets/logos/WhatsApp Image 2026-07-29 at 09.58.28.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

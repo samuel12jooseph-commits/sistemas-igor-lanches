@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça seu pedido na Igor Lanches com entrega ou retirada.">
+    <title>Igor Lanches | Peça online</title>
+    <link rel="stylesheet" href="css/home.css">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#f5a623"></head>
+<body>
+    <header class="cabecalho">
+        <a class="marca" href="index.html" aria-label="Página inicial Igor Lanches">
+            <span class="marca-icone">🍔</span>
+            <span>
+                <strong>Igor Lanches</strong>
+                <small>Delivery e retirada</small>
+            </span>
+        </a>
+
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a href="#vantagens">Como funciona</a>
+            <a href="#destaques">Destaques</a>
+            <a href="#pagamentos">Pagamentos</a>
+        </nav>
+
+        <a class="botao botao-menor" href="cardapio.html">Fazer pedido</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-fundo" aria-hidden="true"></div>
+            <div class="hero-conteudo">
+                <span class="selo">Pedido online, rápido e fácil</span>
+                <h1>Seu lanche favorito sem sair de casa.</h1>
+                <p>Escolha seus produtos, informe o endereço e acompanhe o preparo do pedido.</p>
+
+                <div class="hero-acoes">
+                    <a class="botao" href="cardapio.html">Ver cardápio</a>
+                    <a class="botao botao-secundario" href="#vantagens">Como funciona</a>
+                </div>
+
+                <div class="resumo-loja" aria-label="Informações da loja">
+                    <div>
+                        <span class="status-ponto"></span>
+                        <strong id="status-loja">Verificando horário...</strong>
+                        <small id="texto-horario">Confira o atendimento</small>
+                    </div>
+                    <div>
+                        <strong>30–45 min</strong>
+                        <small>Tempo estimado</small>
+                    </div>
+                    <div>
+                        <strong>Entrega e retirada</strong>
+                        <small>Escolha no fechamento</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="atalhos" aria-label="Atalhos do cardápio">
+            <a href="cardapio.html" class="atalho"><span>🍔</span><strong>Hambúrgueres</strong></a>
+            <a href="cardapio.html" class="atalho"><span>🍗</span><strong>Frango</strong></a>
+            <a href="cardapio.html" class="atalho"><span>🍟</span><strong>Batatas</strong></a>
+            <a href="cardapio.html" class="atalho"><span>🥤</span><strong>Bebidas</strong></a>
+            <a href="cardapio.html" class="atalho"><span>🎁</span><strong>Combos</strong></a>
+        </section>
+
+        <section class="secao" id="vantagens">
+            <div class="secao-cabecalho">
+                <span class="rotulo">Pedido sem complicação</span>
+                <h2>Do cardápio até sua casa</h2>
+                <p>Um processo simples para o cliente e organizado para a lanchonete.</p>
+            </div>
+
+            <div class="passos">
+                <article class="cartao-passo">
+                    <span class="numero">1</span>
+                    <h3>Escolha seus produtos</h3>
+                    <p>Navegue pelas categorias, escolha as quantidades e escreva observações.</p>
+                </article>
+                <article class="cartao-passo">
+                    <span class="numero">2</span>
+                    <h3>Defina a entrega</h3>
+                    <p>Selecione retirada ou entrega e informe seu endereço completo.</p>
+                </article>
+                <article class="cartao-passo">
+                    <span class="numero">3</span>
+                    <h3>Finalize o pagamento</h3>
+                    <p>Escolha Pix, dinheiro, crédito ou débito e envie o pedido.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao secao-destaque" id="destaques">
+            <div class="destaque-texto">
+                <span class="rotulo">Feito do seu jeito</span>
+                <h2>Monte o pedido e acompanhe cada etapa.</h2>
+                <p>O pedido será recebido pela lanchonete, aceito e atualizado durante o preparo e a entrega.</p>
+                <ul>
+                    <li>Observações para cada pedido</li>
+                    <li>Tempo estimado de preparo e entrega</li>
+                    <li>Taxa de entrega informada antes de finalizar</li>
+                    <li>Status do pedido em tempo real na próxima etapa</li>
+                </ul>
+                <a class="botao" href="cardapio.html">Começar pedido</a>
+            </div>
+
+            <div class="painel-exemplo" aria-label="Exemplo de acompanhamento">
+                <div class="painel-topo">
+                    <span>Pedido #102</span>
+                    <strong>R$ 58,00</strong>
+                </div>
+                <div class="linha-status concluido"><span>✓</span><div><strong>Pedido enviado</strong><small>Recebemos seu pedido</small></div></div>
+                <div class="linha-status ativo"><span>2</span><div><strong>Em preparo</strong><small>A cozinha está preparando</small></div></div>
+                <div class="linha-status"><span>3</span><div><strong>Saiu para entrega</strong><small>O entregador está a caminho</small></div></div>
+                <div class="linha-status"><span>4</span><div><strong>Entregue</strong><small>Bom apetite!</small></div></div>
+            </div>
+        </section>
+
+        <section class="secao" id="pagamentos">
+            <div class="secao-cabecalho">
+                <span class="rotulo">Você escolhe</span>
+                <h2>Formas de pagamento</h2>
+            </div>
+            <div class="pagamentos">
+                <div><span>▣</span><strong>Pix</strong><small>Rápido e prático</small></div>
+                <div><span>💵</span><strong>Dinheiro</strong><small>Informe se precisa de troco</small></div>
+                <div><span>💳</span><strong>Crédito</strong><small>Pagamento na entrega</small></div>
+                <div><span>💳</span><strong>Débito</strong><small>Pagamento na entrega</small></div>
+            </div>
+        </section>
+
+        <section class="chamada-final">
+            <div>
+                <span class="rotulo">Bateu a fome?</span>
+                <h2>Seu pedido começa aqui.</h2>
+                <p>Abra o cardápio, escolha seus favoritos e finalize em poucos passos.</p>
+            </div>
+            <a class="botao" href="cardapio.html">Pedir agora</a>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div>
+            <strong>🍔 Igor Lanches</strong>
+            <p>Lanches, batatas e bebidas com entrega e retirada.</p>
+        </div>
+        <div>
+            <strong>Atendimento</strong>
+            <p>Consulte o horário e a previsão antes de finalizar.</p>
+        </div>
+        <p class="copyright">© <span id="ano-atual"></span> Igor Lanches.</p>
+    </footer>
+
+    <a class="botao-flutuante" href="cardapio.html">Fazer pedido</a>
+    <script src="js/home.js"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.warn));}</script></body>
+</html>
