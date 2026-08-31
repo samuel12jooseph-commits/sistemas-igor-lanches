@@ -1,0 +1,125 @@
+:root {
+    --amarelo: #ffb400;
+    --amarelo-claro: #fff3cf;
+    --preto: #111111;
+    --cinza: #6b6b6b;
+    --fundo: #f7f7f5;
+    --branco: #ffffff;
+    --borda: #e6e6e1;
+    --verde: #1ca75b;
+    --sombra: 0 20px 60px rgba(0, 0, 0, .10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; color: var(--preto); background: var(--fundo); line-height: 1.5; }
+a { color: inherit; }
+
+.cabecalho {
+    width: 100%; min-height: 78px; padding: 14px clamp(20px, 5vw, 76px);
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    position: sticky; top: 0; z-index: 20; background: rgba(17,17,17,.96); color: white;
+    backdrop-filter: blur(14px);
+}
+.marca { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+.marca-icone { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px; background: var(--amarelo); font-size: 24px; }
+.marca strong, .marca small { display: block; }
+.marca strong { font-size: 20px; }
+.marca small { color: #cfcfcf; }
+.navegacao { display: flex; gap: 26px; }
+.navegacao a { text-decoration: none; color: #dedede; font-weight: 700; font-size: 14px; }
+.navegacao a:hover { color: var(--amarelo); }
+
+.botao { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 25px; border-radius: 14px; background: var(--amarelo); color: var(--preto); text-decoration: none; font-weight: 900; border: 1px solid var(--amarelo); transition: .2s ease; }
+.botao:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255,180,0,.25); }
+.botao-menor { min-height: 44px; padding: 0 20px; }
+.botao-secundario { background: rgba(255,255,255,.08); color: white; border-color: rgba(255,255,255,.28); }
+
+.hero { position: relative; min-height: 680px; display: flex; align-items: center; overflow: hidden; background: #151515; color: white; }
+.hero-fundo { position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.70) 45%, rgba(0,0,0,.22) 100%), url('../assets/banners/ChatGPT Image 4 de ago. de 2026, 15_25_29.png'); background-size: cover; background-position: center; transform: scale(1.02); }
+.hero-conteudo { position: relative; z-index: 2; width: min(720px, 100%); padding: 80px clamp(22px, 7vw, 110px); }
+.selo, .rotulo { display: inline-block; color: var(--amarelo); text-transform: uppercase; letter-spacing: 1.4px; font-weight: 900; font-size: 13px; }
+.hero h1 { font-size: clamp(42px, 7vw, 78px); line-height: 1.02; margin: 18px 0 22px; max-width: 760px; }
+.hero-conteudo > p { max-width: 620px; color: #e2e2e2; font-size: clamp(18px, 2vw, 22px); }
+.hero-acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.resumo-loja { margin-top: 42px; padding-top: 26px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid rgba(255,255,255,.2); }
+.resumo-loja > div { min-width: 0; }
+.resumo-loja strong, .resumo-loja small { display: block; }
+.resumo-loja small { color: #bdbdbd; margin-top: 4px; }
+.status-ponto { display: inline-block; width: 9px; height: 9px; background: var(--verde); border-radius: 50%; margin-right: 7px; box-shadow: 0 0 0 6px rgba(28,167,91,.14); }
+.status-ponto.fechado { background: #e04646; box-shadow: 0 0 0 6px rgba(224,70,70,.14); }
+
+.atalhos { position: relative; z-index: 3; max-width: 1180px; margin: -45px auto 0; padding: 0 22px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.atalho { min-height: 116px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: white; border: 1px solid var(--borda); border-radius: 20px; box-shadow: var(--sombra); transition: .2s ease; }
+.atalho:hover { transform: translateY(-5px); border-color: var(--amarelo); }
+.atalho span { font-size: 31px; }
+
+.secao { max-width: 1180px; margin: 0 auto; padding: 105px 22px; }
+.secao-cabecalho { max-width: 690px; margin-bottom: 38px; }
+.secao h2, .chamada-final h2 { font-size: clamp(34px, 5vw, 54px); line-height: 1.08; margin: 12px 0; }
+.secao-cabecalho p, .destaque-texto > p, .chamada-final p { color: var(--cinza); font-size: 18px; }
+.passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.cartao-passo { background: white; border: 1px solid var(--borda); border-radius: 22px; padding: 30px; min-height: 240px; box-shadow: 0 10px 36px rgba(0,0,0,.05); }
+.numero { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--amarelo-claro); color: #9b6700; font-weight: 900; margin-bottom: 35px; }
+.cartao-passo h3 { font-size: 23px; margin-bottom: 10px; }
+.cartao-passo p { color: var(--cinza); }
+
+.secao-destaque { display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: center; }
+.destaque-texto ul { margin: 26px 0 30px; display: grid; gap: 12px; list-style: none; }
+.destaque-texto li::before { content: '✓'; display: inline-grid; place-items: center; width: 24px; height: 24px; margin-right: 10px; border-radius: 50%; background: var(--amarelo-claro); color: #8a5d00; font-weight: 900; }
+.painel-exemplo { background: #151515; color: white; border-radius: 28px; padding: 28px; box-shadow: var(--sombra); }
+.painel-topo { display: flex; justify-content: space-between; padding-bottom: 22px; border-bottom: 1px solid #343434; }
+.painel-topo span { color: #bcbcbc; }
+.linha-status { display: grid; grid-template-columns: 42px 1fr; gap: 14px; align-items: center; padding: 20px 0; color: #777; }
+.linha-status + .linha-status { border-top: 1px solid #2c2c2c; }
+.linha-status > span { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; border: 2px solid #4a4a4a; font-weight: 900; }
+.linha-status strong, .linha-status small { display: block; }
+.linha-status small { margin-top: 3px; }
+.linha-status.concluido, .linha-status.ativo { color: white; }
+.linha-status.concluido > span { background: var(--verde); border-color: var(--verde); }
+.linha-status.ativo > span { background: var(--amarelo); color: #111; border-color: var(--amarelo); }
+
+.pagamentos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.pagamentos > div { background: white; border: 1px solid var(--borda); padding: 24px; border-radius: 20px; }
+.pagamentos span { font-size: 27px; }
+.pagamentos strong, .pagamentos small { display: block; }
+.pagamentos strong { margin-top: 14px; font-size: 19px; }
+.pagamentos small { color: var(--cinza); margin-top: 4px; }
+
+.chamada-final { max-width: 1180px; margin: 0 auto 90px; padding: 48px; border-radius: 28px; display: flex; align-items: center; justify-content: space-between; gap: 35px; background: var(--preto); color: white; }
+.chamada-final p { color: #c7c7c7; }
+.rodape { padding: 55px clamp(22px, 6vw, 90px) 28px; background: #0b0b0b; color: #fff; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.rodape p { color: #a9a9a9; margin-top: 7px; }
+.copyright { grid-column: 1 / -1; border-top: 1px solid #292929; padding-top: 22px; }
+.botao-flutuante { display: none; }
+
+@media (max-width: 900px) {
+    .navegacao { display: none; }
+    .hero { min-height: 620px; }
+    .resumo-loja { grid-template-columns: 1fr; }
+    .atalhos { grid-template-columns: repeat(3, 1fr); }
+    .passos, .pagamentos { grid-template-columns: repeat(2, 1fr); }
+    .secao-destaque { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+    body { padding-bottom: 74px; }
+    .cabecalho { min-height: 68px; padding: 10px 16px; }
+    .cabecalho > .botao { display: none; }
+    .marca small { display: none; }
+    .hero { min-height: 650px; align-items: flex-end; }
+    .hero-fundo { background-image: linear-gradient(0deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.62) 62%, rgba(0,0,0,.18) 100%), url('../assets/banners/ChatGPT Image 4 de ago. de 2026, 15_25_29.png'); background-position: center; }
+    .hero-conteudo { padding: 70px 20px 55px; }
+    .hero h1 { font-size: 46px; }
+    .hero-acoes .botao { width: 100%; }
+    .resumo-loja { margin-top: 30px; }
+    .atalhos { margin-top: 0; padding: 22px 16px 0; grid-template-columns: repeat(2, 1fr); }
+    .atalho:last-child { grid-column: 1 / -1; }
+    .secao { padding: 75px 18px; }
+    .passos, .pagamentos { grid-template-columns: 1fr; }
+    .chamada-final { margin: 0 16px 55px; padding: 34px 24px; flex-direction: column; align-items: flex-start; }
+    .chamada-final .botao { width: 100%; }
+    .rodape { grid-template-columns: 1fr; padding: 45px 20px 25px; }
+    .copyright { grid-column: auto; }
+    .botao-flutuante { position: fixed; z-index: 30; left: 14px; right: 14px; bottom: 12px; min-height: 52px; display: flex; align-items: center; justify-content: center; background: var(--amarelo); color: var(--preto); border-radius: 14px; text-decoration: none; font-weight: 900; box-shadow: 0 12px 35px rgba(0,0,0,.28); }
+}

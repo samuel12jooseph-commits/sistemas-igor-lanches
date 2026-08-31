@@ -1,0 +1,12 @@
+.produtos-admin{padding:28px;display:grid;gap:24px;background:#f4f4f4;min-height:calc(100vh - 100px)}
+.produto-form-card,.lista-produtos-admin{background:#fff;border-radius:20px;padding:24px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.titulo-form,.cabecalho-lista{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+.grade-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.grade-form label{display:grid;gap:7px;font-weight:700}
+.grade-form input,.grade-form select,.grade-form textarea,#buscar-produto-admin{width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:11px;font:inherit;background:#fff}
+.campo-largo{grid-column:span 2}.checagem{display:flex!important;align-items:center;gap:9px;font-weight:600!important}.checagem input{width:auto}
+.acoes-form{display:flex;gap:10px;margin-top:20px}.botao-principal,.botao-secundario,.acao-produto{border:0;border-radius:10px;padding:12px 16px;font-weight:800;cursor:pointer}.botao-principal{background:#ffb000;color:#111}.botao-secundario{background:#eee;color:#111}
+#buscar-produto-admin{max-width:320px}.grade-produtos-admin{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.mensagem-produtos{color:#666;padding:16px 0}
+.produto-admin-card{border:1px solid #e5e5e5;border-radius:16px;padding:18px;display:grid;gap:12px}.produto-admin-card.indisponivel{opacity:.62}.produto-admin-topo{display:flex;justify-content:space-between;gap:12px}.produto-admin-card h3{margin:0}.produto-admin-card p{margin:0;color:#555}.produto-preco{font-size:20px;font-weight:900}.etiqueta{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:800;background:#eee}.etiqueta.disponivel{background:#dff5e3;color:#176b2b}.etiqueta.esgotado{background:#ffe1e1;color:#a31f1f}.acoes-produto{display:flex;flex-wrap:wrap;gap:8px}.acao-produto{padding:9px 11px;background:#eee}.acao-produto.perigo{background:#ffe1e1;color:#971b1b}.acao-produto.status{background:#fff0c7}
+@media(max-width:1050px){.grade-form{grid-template-columns:repeat(2,minmax(0,1fr))}.grade-produtos-admin{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.produtos-admin{padding:14px}.grade-form,.grade-produtos-admin{grid-template-columns:1fr}.campo-largo{grid-column:auto}.titulo-form,.cabecalho-lista{align-items:stretch;flex-direction:column}#buscar-produto-admin{max-width:none}}
