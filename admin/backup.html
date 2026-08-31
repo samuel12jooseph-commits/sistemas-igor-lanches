@@ -1,0 +1,10 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Igor Lanches | Backup</title><link rel="stylesheet" href="../css/pedidos.css"><link rel="stylesheet" href="../css/modulos-admin.css"></head><body><div class="admin-layout"><aside class="menu-admin"><div class="marca-admin">🍔 <strong>Igor Lanches</strong><span>Administração</span></div><nav>
+      <a href="./dashboard.html">🏠 Dashboard</a>
+      <a href="./painel.html">📦 Pedidos</a>
+      <a href="./produtos.html">🍔 Produtos</a>
+      <a href="./clientes.html">👥 Clientes</a>
+      <a href="./financeiro.html">📊 Financeiro</a>
+      <a href="./relatorios.html">📈 Relatórios</a>
+      <a class="ativo" href="./backup.html">💾 Backup</a>
+      <a href="./configuracoes.html">⚙️ Configurações</a>
+    </nav><button type="button" id="botao-sair" class="sair-menu">🚪 Sair</button></aside><div class="conteudo-admin"><header class="topo-pedidos"><div><h1>Backup</h1><p>Exporte os dados do sistema para um arquivo</p></div></header><main class="modulo-admin"><section class="painel-card backup-card"><h2>Backup completo</h2><p>Salva pedidos, produtos e configurações em um arquivo JSON no seu computador.</p><button id="baixar-backup" class="botao-salvar">💾 Baixar backup agora</button><div id="backup-status" class="aviso">Nenhum backup realizado nesta sessão.</div></section><section class="painel-card"><h2>Recomendação</h2><p>Faça um backup semanal e guarde uma cópia no Google Drive ou em um pendrive.</p><p><strong>A restauração automática não foi ativada</strong> para evitar apagar dados por engano. O arquivo exportado pode ser usado por um técnico para restauração.</p></section></main></div></div><script type="module" src="./auth-guard.js"></script><script type="module" src="../js/backup-admin.js"></script></body></html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Igor Lanches | Administração</title>
+  <link rel="stylesheet" href="../css/pedidos.css">
+</head>
+<body>
+<div class="admin-layout">
+  <aside class="menu-admin">
+    <div class="marca-admin">🍔 <strong>Igor Lanches</strong><span>Administração</span></div>
+    <nav>
+      <a href="./dashboard.html">🏠 Dashboard</a>
+      <a class="ativo" href="./painel.html">📦 Pedidos</a>
+      <a href="./produtos.html">🍔 Produtos</a>
+      <a href="./clientes.html">👥 Clientes</a>
+      <a href="./financeiro.html">📊 Financeiro</a>
+      <a href="./relatorios.html">📈 Relatórios</a>
+      <a href="./backup.html">💾 Backup</a>
+      <a href="./configuracoes.html">⚙️ Configurações</a>
+    </nav>
+    <button type="button" id="botao-sair" class="sair-menu">🚪 Sair</button>
+  </aside>
+
+  <div class="conteudo-admin">
+    <header class="topo-pedidos">
+      <div><h1>Painel de pedidos</h1><p>Acompanhe a cozinha em tempo real</p></div>
+      <a href="../cardapio.html" class="botao-voltar">Abrir cardápio</a>
+    </header>
+
+    <main class="painel-pedidos" id="pedidos">
+      <section class="resumo-dashboard">
+        <article><span>Novos</span><strong id="resumo-novos">—</strong></article>
+        <article><span>Em preparo</span><strong id="resumo-preparo">—</strong></article>
+        <article><span>Prontos</span><strong id="resumo-prontos">—</strong></article>
+        <article><span>Finalizados</span><strong id="resumo-finalizados">—</strong></article>
+      </section>
+
+      <section class="cabecalho-painel">
+        <div><span class="subtitulo">Operação</span><h2>Pedidos</h2></div>
+        <div class="acoes-cabecalho"><button type="button" id="limpar-finalizados">Limpar finalizados</button></div>
+      </section>
+
+      <section class="colunas-pedidos">
+        <div class="coluna"><div class="titulo-coluna"><h3>Novos</h3><span id="contador-novos">0</span></div><div id="pedidos-novos" class="lista-pedidos"></div></div>
+        <div class="coluna"><div class="titulo-coluna"><h3>Em preparo</h3><span id="contador-preparo">0</span></div><div id="pedidos-preparo" class="lista-pedidos"></div></div>
+        <div class="coluna"><div class="titulo-coluna"><h3>Prontos</h3><span id="contador-prontos">0</span></div><div id="pedidos-prontos" class="lista-pedidos"></div></div>
+        <div class="coluna"><div class="titulo-coluna"><h3>Finalizados</h3><span id="contador-finalizados">0</span></div><div id="pedidos-finalizados" class="lista-pedidos"></div></div>
+      </section>
+    </main>
+  </div>
+</div>
+<script type="module" src="./auth-guard.js"></script>
+<script type="module" src="../js/pedidos-firestore.js"></script>
+<script>
+setInterval(() => {
+  [["contador-novos","resumo-novos"],["contador-preparo","resumo-preparo"],["contador-prontos","resumo-prontos"],["contador-finalizados","resumo-finalizados"]].forEach(([a,b])=>{const x=document.getElementById(a),y=document.getElementById(b);if(x&&y)y.textContent=x.textContent;});
+},500);
+</script>
+</body>
+</html>

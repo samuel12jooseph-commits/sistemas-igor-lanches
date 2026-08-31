@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Igor Lanches | Produtos</title>
+  <link rel="stylesheet" href="../css/pedidos.css">
+  <link rel="stylesheet" href="../css/produtos.css">
+</head>
+<body>
+<div class="admin-layout">
+  <aside class="menu-admin">
+    <div class="marca-admin">🍔 <strong>Igor Lanches</strong><span>Administração</span></div>
+    <nav>
+      <a href="./dashboard.html">🏠 Dashboard</a>
+      <a href="./painel.html">📦 Pedidos</a>
+      <a class="ativo" href="./produtos.html">🍔 Produtos</a>
+      <a href="./clientes.html">👥 Clientes</a>
+      <a href="./financeiro.html">📊 Financeiro</a>
+      <a href="./relatorios.html">📈 Relatórios</a>
+      <a href="./backup.html">💾 Backup</a>
+      <a href="./configuracoes.html">⚙️ Configurações</a>
+    </nav>
+    <button type="button" id="botao-sair" class="sair-menu">🚪 Sair</button>
+  </aside>
+
+  <div class="conteudo-admin">
+    <header class="topo-pedidos">
+      <div><h1>Produtos</h1><p>Cadastre e atualize o cardápio</p></div>
+      <a href="../cardapio.html" class="botao-voltar">Abrir cardápio</a>
+    </header>
+
+    <main class="produtos-admin">
+      <section class="produto-form-card">
+        <div class="titulo-form">
+          <div><span class="subtitulo">Cadastro</span><h2 id="titulo-formulario">Novo produto</h2></div>
+          <button type="button" id="importar-cardapio" class="botao-secundario">Importar cardápio atual</button>
+        </div>
+
+        <form id="form-produto">
+          <input type="hidden" id="produto-id">
+          <div class="grade-form">
+            <label>Nome<input id="produto-nome" required maxlength="80"></label>
+            <label>Preço<input id="produto-preco" type="number" min="0" step="0.01" required></label>
+            <label>Categoria
+              <select id="produto-categoria" required>
+                <option value="hamburgueres">Hambúrgueres</option>
+                <option value="frango">Frango</option>
+                <option value="sem-carne">Sem carne</option>
+                <option value="bebidas">Bebidas</option>
+                <option value="combos">Combos</option>
+                <option value="batatas">Batatas</option>
+                <option value="outros">Outros</option>
+              </select>
+            </label>
+            <label>Ordem<input id="produto-ordem" type="number" min="0" step="1" value="0"></label>
+            <label class="campo-largo">Descrição<textarea id="produto-descricao" rows="3" maxlength="240"></textarea></label>
+            <label class="campo-largo">URL da imagem (opcional)<input id="produto-imagem" type="url" placeholder="https://..."></label>
+            <label class="checagem"><input id="produto-disponivel" type="checkbox" checked> Produto disponível</label>
+            <label class="checagem"><input id="produto-restrito" type="checkbox"> Somente dinheiro ou Pix</label>
+          </div>
+          <div class="acoes-form">
+            <button type="submit" class="botao-principal">Salvar produto</button>
+            <button type="button" id="cancelar-edicao" class="botao-secundario" hidden>Cancelar edição</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="lista-produtos-admin">
+        <div class="cabecalho-lista">
+          <div><span class="subtitulo">Cardápio</span><h2>Produtos cadastrados</h2></div>
+          <input id="buscar-produto-admin" type="search" placeholder="Buscar produto...">
+        </div>
+        <div id="mensagem-produtos" class="mensagem-produtos">Carregando...</div>
+        <div id="grade-produtos-admin" class="grade-produtos-admin"></div>
+      </section>
+    </main>
+  </div>
+</div>
+<script type="module" src="./auth-guard.js"></script>
+<script type="module" src="../js/produtos-admin.js"></script>
+</body>
+</html>
